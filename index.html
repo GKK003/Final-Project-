@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lukan.it</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="first_div">
@@ -55,7 +59,181 @@
         <button id="getStarted" class="btn">Get Started</button>
       </div>
     </div>
+    <div class="wheat_div">
+      <h1 class="wheat h1">
+        14 Years <br />
+        Experience
+      </h1>
+      <h1 class="wheat_h1">500K+ <br />Customer</h1>
+      <p class="wheat_p">
+        We are very experienced and professional because we have been around
+        since 2006 and have made us software agency that is most feared and
+        trusted by everyone
+      </p>
+    </div>
+
+    <div class="brown_div">
+      <img
+        class="brown_img"
+        src="/images/pexels-cottonbro-6804071.jpg"
+        alt="code"
+      />
+      <h1 class="brown_h1">
+        We have a reliable and solid team to solve problems
+      </h1>
+      <p class="brown_p">
+        let's love your body by keeping your body from obesity and don't let it
+        become a comorbid that endangers your own body, love yourself and join
+        us now sis and bro <br /><br />let's love your body by keeping your body
+        from obesity and don't let it become a comorbid that endangers your own
+        body, love yourself and join us now sis and bro
+      </p>
+    </div>
+
+    <div class="white_div">
+      <h1 class="white_header">What Benefits Will You Get Working With Us</h1>
+      <div class="flex">
+        <div class="white_left">
+          <h1 class="white_h1">You will get 3 main advantages</h1>
+          <p class="white_p">
+            We give you many advantages but we give you 3 main advantages which
+            are as follows
+          </p>
+          <div id="boxDiv1" class="box_div">
+            <div class="orange_div">
+              <img src="/images/Group.png" alt="" />
+            </div>
+
+            <div class="column">
+              <h1 class="column_h1">Best Quality</h1>
+              <p id="firstColumnP" class="column_p">
+                Quality is always our priority for you
+              </p>
+            </div>
+            <img id="firstArrow" src="/images/Vector 18.png" alt="" />
+          </div>
+          <div id="boxDiv2" class="box_div">
+            <div class="orange_div">
+              <img src="/images/9.png" alt="" />
+            </div>
+            <div class="column">
+              <h1 class="column_h1">Affordable Prices</h1>
+              <p id="secondColumnP" class="column_p">
+                Price is negotiable and negotiable
+              </p>
+            </div>
+            <img
+              id="secondArrow"
+              class="arrow"
+              src="/images/Vector 18.png"
+              alt=""
+            />
+          </div>
+          <div id="boxDiv3" class="box_div">
+            <div class="orange_div">
+              <img src="/images/86.png" alt="" />
+            </div>
+            <div class="column">
+              <h1 class="column_h1">Customer Services</h1>
+              <p id="thirdColumnP" class="column_p">
+                Consult your problem 24/7
+              </p>
+            </div>
+            <img
+              id="thirdArrow"
+              class="arrow"
+              src="/images/Vector 18.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <img id="whiteImage" class="white_img" src="/images/BLANK.jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="case_div">
+      <h1 class="case_h1">Case Studies That We Have Worked On</h1>
+      <p class="case_p">
+        We are very experienced and professional because we have been around
+        since 2006 and have made us software agency that is most feared and
+        trusted by everyone
+      </p>
+    </div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="/images/34b61d1f9aa02d2c57a435ad755d34e0.jpg"
+            alt="Slide 1"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="/images/4940e78f82f1816f8c3d66fb4c0b617a.jpg"
+            alt="Slide 2"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="/images/7504b17ff0b85fa0b1af7a50900b9069.jpg"
+            alt="Slide 3"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="/images/b3be3a3d7253c5e0d796574cae5a3391.jpg"
+            alt="Slide 4"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="/images/e8b555fe881fb560c8d966f62e1d5c98.jpg"
+            alt="Slide 5"
+          />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <style>
+      .swiper {
+        max-width: 1224px;
+        width: 100%;
+        height: 300px;
+        margin-left: 100px;
+        margin-top: 70px;
+        margin-bottom: 50px;
+        cursor: pointer;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f0f0f0;
+        overflow: hidden;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true, // optional: makes slides loop infinitely
+        slidesPerView: 3, // number of slides visible
+        spaceBetween: 30, // spacing in px
+        centeredSlides: true, // optional: center the active slide
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true, // make pagination bullets clickable
+        },
+      });
+    </script>
   </body>
 </html>
