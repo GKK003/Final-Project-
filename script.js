@@ -64,3 +64,64 @@ boxDiv3.addEventListener("click", () => {
     whiteImage.src = "/images/BLANK.jpg";
   }
 });
+
+const askedBox1 = document.getElementById("askedBox1");
+const askedBox2 = document.getElementById("askedBox2");
+const askedBox3 = document.getElementById("askedBox3");
+const askedBox4 = document.getElementById("askedBox4");
+const askedBox5 = document.getElementById("askedBox5");
+const askedBoxP1 = document.getElementById("askedBoxP1");
+const askedBoxP2 = document.getElementById("askedBoxP2");
+const askedBoxP3 = document.getElementById("askedBoxP3");
+const askedBoxP4 = document.getElementById("askedBoxP4");
+const askedBoxP5 = document.getElementById("askedBoxP5");
+
+askedBox1.addEventListener("click", () => {
+  if (askedBoxP1.style.display === "none") {
+    askedBox1.style.height = "180px";
+    askedBoxP1.style.display = "block";
+  } else {
+    askedBoxP1.style.display = "none";
+    askedBox1.style.height = "90px";
+  }
+});
+
+askedBox2.addEventListener("click", () => {
+  if (askedBoxP2.style.display === "none") {
+    askedBox2.style.height = "180px";
+    askedBoxP2.style.display = "block";
+  } else {
+    askedBoxP2.style.display = "none";
+    askedBox2.style.height = "90px";
+  }
+});
+
+askedBox3.addEventListener("click", () => {
+  if (askedBoxP3.style.display === "none") {
+    askedBox3.style.height = "180px";
+    askedBoxP3.style.display = "block";
+  } else {
+    askedBoxP3.style.display = "none";
+    askedBox3.style.height = "90px";
+  }
+});
+
+askedBox4.addEventListener("click", () => {
+  if (askedBoxP4.style.display === "none") {
+    askedBox4.style.height = "180px";
+    askedBoxP4.style.display = "block";
+  } else {
+    askedBoxP4.style.display = "none";
+    askedBox4.style.height = "90px";
+  }
+});
+
+askedBox5.addEventListener("click", () => {
+  if (askedBoxP5.style.display === "none") {
+    askedBox5.style.height = "180px";
+    askedBoxP5.style.display = "block";
+  } else {
+    askedBoxP5.style.display = "none";
+    askedBox5.style.height = "90px";
+  }
+});

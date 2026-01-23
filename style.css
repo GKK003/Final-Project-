@@ -7,7 +7,7 @@
 }
 
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -353,4 +353,82 @@ body {
   color: #1e1000;
   font-weight: 400;
   opacity: 0.71;
+}
+
+.asked_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.asked1_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+}
+
+.asked1_h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 60px;
+  color: #1e1000;
+}
+
+.asked1_p {
+  max-width: 444px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 180%;
+  font-weight: 400;
+  color: #1e1000b5;
+}
+
+.asked_1p_span {
+  font-size: 16px;
+  line-height: 180%;
+  font-weight: 400;
+  color: #1e1000b5;
+  text-transform: lowercase;
+}
+.asked_boxes_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 60px;
+  margin-bottom: 150px;
+}
+
+.asked_box {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  flex-direction: column;
+  width: 1200px;
+  height: 90px;
+  border: 1px solid #dddddd;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.asked_box_h1 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #1e1000;
+}
+
+.asked_box_p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #aaaaaa;
+  display: none;
 }
