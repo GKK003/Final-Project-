@@ -963,7 +963,6 @@ footer {
   }
 
   footer {
-    flex-direction: column;
     align-items: flex-start;
     gap: 30px;
   }
