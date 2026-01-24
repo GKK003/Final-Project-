@@ -1,9 +1,3 @@
-const playPauseBtn = document.getElementById("playPause");
-
-document.getElementById("getStarted").addEventListener("click", () => {
-  document.body.style.overflow = "auto";
-});
-
 const boxDiv1 = document.getElementById("boxDiv1");
 const boxDiv2 = document.getElementById("boxDiv2");
 const boxDiv3 = document.getElementById("boxDiv3");
@@ -15,6 +9,10 @@ const whiteImage = document.getElementById("whiteImage");
 const firstArrow = document.getElementById("firstArrow");
 const secondArrow = document.getElementById("secondArrow");
 const thirdArrow = document.getElementById("thirdArrow");
+
+document.getElementById("getStarted").addEventListener("click", () => {
+  document.body.style.overflow = "auto";
+});
 
 boxDiv1.addEventListener("click", () => {
   if (
@@ -36,8 +34,8 @@ boxDiv1.addEventListener("click", () => {
 
 boxDiv2.addEventListener("click", () => {
   if (
-    (secondColumnP.style.display === "none",
-    whiteImage.src.endsWith("BLANK.jpg"))
+    secondColumnP.style.display === "none" &&
+    whiteImage.src.endsWith("BLANK.jpg")
   ) {
     whiteImage.src = "/images/pexels-adriana-beckova-1584864721-33008583.jpg";
 
@@ -124,4 +122,55 @@ askedBox5.addEventListener("click", () => {
     askedBoxP5.style.display = "none";
     askedBox5.style.height = "90px";
   }
+});
+
+const homeLink = document.getElementById("homeLink");
+const homeFooter = document.getElementById("homeFooter");
+const companyLink = document.getElementById("companyLink");
+const itLink = document.getElementById("itLink");
+const featuresLink = document.getElementById("featuresLink");
+
+companyLink.addEventListener("click", () => {
+  window.scrollBy({
+    top: 600,
+    behavior: "smooth",
+  });
+});
+
+itLink.addEventListener("click", () => {
+  window.scrollBy({
+    top: 1200,
+    behavior: "smooth",
+  });
+});
+
+featuresLink.addEventListener("click", () => {
+  window.scrollBy({
+    top: 2250,
+    behavior: "smooth",
+  });
+});
+
+const contactLink = document.getElementById("contactLink");
+const callPopup = document.getElementById("callPopup");
+const closePopup = document.getElementById("closePopup");
+
+contactLink.addEventListener("click", () => {
+  callPopup.style.display = "flex";
+});
+
+closePopup.addEventListener("click", () => {
+  callPopup.style.display = "none";
+});
+homeFooter.addEventListener("click", () => {
+  window.scrollBy({
+    top: -6000,
+    behavior: "smooth",
+  });
+});
+
+const secondGetStarted = document.getElementById("secondGetStarted");
+
+secondGetStarted.addEventListener("click", () => {
+  callPopup.style.display = "flex";
 });

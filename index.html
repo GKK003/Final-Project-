@@ -19,11 +19,19 @@
         </div>
 
         <div class="nav">
-          <a class="pages" href="#">Home</a>
-          <a class="pages" href="#">Company</a>
-          <a class="pages" href="#">IT Solutions</a>
-          <a class="pages" href="#">Features</a>
-          <a class="pages" href="#">Contact us</a>
+          <a class="pages" id="homeLink" href="#">Home</a>
+          <a class="pages" id="companyLink" href="#">Company</a>
+          <a class="pages" id="itLink" href="#">IT Solutions</a>
+          <a class="pages" id="featuresLink" href="#">Features</a>
+          <a class="pages" id="contactLink" href="#">Contact us</a>
+        </div>
+
+        <div id="callPopup" class="popup">
+          <div class="popup-box">
+            <h3>Contact us</h3>
+            <p>Please call <strong>+995 599 923 007</strong></p>
+            <button id="closePopup">ok</button>
+          </div>
         </div>
 
         <div class="sign">
@@ -264,7 +272,7 @@
         From now on cooperate with us and get satisfactory benefits and benefits
       </p>
 
-      <button class="btn">Get Started</button>
+      <button id="secondGetStarted" class="btn">Get Started</button>
     </div>
 
     <footer>
@@ -278,26 +286,33 @@
         </p>
         <div class="social">
           <div class="fb">
-            <img class="fb_photo" src="/images/image.png" alt="fb" />
+            <a href="https://www.facebook.com" target="_blank"
+              ><img class="fb_photo" src="/images/image.png" alt="fb"
+            /></a>
           </div>
           <div class="insta">
-            <img class="insta_photo" src="/images/10462345.png" alt="insta" />
+            <a href="https://www.instagram.com" target="_blank"
+              ><img class="insta_photo" src="/images/10462345.png" alt="insta"
+            /></a>
           </div>
           <div class="twitter">
-            <img
-              class="twitter_photo"
-              src="/images/image copy 2.png"
-              alt="twitter"
-            />
+            <a href="https://x.com" target="_blank"
+              ><img
+                class="twitter_photo"
+                src="/images/image copy 2.png"
+                alt="twitter"
+            /></a>
           </div>
           <div class="yt">
-            <img class="yt_photo" src="/images/image copy.png" alt="youtube" />
+            <a href="https://youtube.com" target="_blank"
+              ><img class="yt_photo" src="/images/image copy.png" alt="youtube"
+            /></a>
           </div>
         </div>
       </div>
       <div class="links_div">
         <h1 class="footer_h1">Links</h1>
-        <p class="footer_p">Home</p>
+        <p id="homeFooter" class="footer_p">Home</p>
         <p class="footer_p">Services</p>
         <p class="footer_p">Invest</p>
         <p class="footer_p">Tutorial</p>
@@ -360,6 +375,20 @@
         slidesPerView: 3,
         spaceBetween: 30,
         centeredSlides: true,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
