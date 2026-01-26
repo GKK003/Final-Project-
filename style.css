@@ -652,6 +652,10 @@ footer {
   cursor: pointer;
 }
 
+.footer_a {
+  text-decoration: none;
+}
+
 .footer_p1 {
   color: white;
   font-size: 14px;

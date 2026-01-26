@@ -174,3 +174,9 @@ const secondGetStarted = document.getElementById("secondGetStarted");
 secondGetStarted.addEventListener("click", () => {
   callPopup.style.display = "flex";
 });
+
+const footerP = document
+  .getElementById("footerP")
+  .addEventListener("click", () => {
+    callPopup.style.display = "flex";
+  });
