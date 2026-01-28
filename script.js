@@ -180,3 +180,93 @@ const footerP = document
   .addEventListener("click", () => {
     callPopup.style.display = "flex";
   });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("loginForm");
+  const signupForm = document.getElementById("signupForm");
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+  function setError(input, errorEl, message) {
+    errorEl.textContent = message;
+    input.classList.add("is-invalid");
+  }
+
+  function clearError(input, errorEl) {
+    errorEl.textContent = "";
+    input.classList.remove("is-invalid");
+  }
+
+  // LOGIN VALIDATION
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    const email = loginEmail.value.trim();
+    const pass = loginPassword.value.trim();
+
+    if (!emailRegex.test(email)) {
+      setError(loginEmail, loginEmailError, "Invalid email");
+      valid = false;
+    } else {
+      clearError(loginEmail, loginEmailError);
+    }
+
+    if (pass.length < 6) {
+      setError(loginPassword, loginPasswordError, "Password too short");
+      valid = false;
+    } else {
+      clearError(loginPassword, loginPasswordError);
+    }
+
+    if (valid) {
+      alert("Login success ✅");
+    }
+  });
+
+  // SIGNUP VALIDATION
+  signupForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    if (signupName.value.trim().length < 2) {
+      setError(signupName, signupNameError, "Enter full name");
+      valid = false;
+    } else clearError(signupName, signupNameError);
+
+    if (!emailRegex.test(signupEmail.value.trim())) {
+      setError(signupEmail, signupEmailError, "Invalid email");
+      valid = false;
+    } else clearError(signupEmail, signupEmailError);
+
+    if (!passwordRegex.test(signupPassword.value)) {
+      setError(
+        signupPassword,
+        signupPasswordError,
+        "Min 8 chars, 1 uppercase, 1 number",
+      );
+      valid = false;
+    } else clearError(signupPassword, signupPasswordError);
+
+    if (signupPassword.value !== signupConfirm.value) {
+      setError(signupConfirm, signupConfirmError, "Passwords do not match");
+      valid = false;
+    } else clearError(signupConfirm, signupConfirmError);
+
+    if (valid) {
+      alert("Account created ✅");
+    }
+  });
+
+  // SWITCH FORMS
+  document.getElementById("toSignup").onclick = () => {
+    loginForm.classList.add("auth-hidden");
+    signupForm.classList.remove("auth-hidden");
+  };
+
+  document.getElementById("toLogin").onclick = () => {
+    signupForm.classList.add("auth-hidden");
+    loginForm.classList.remove("auth-hidden");
+  };
+});

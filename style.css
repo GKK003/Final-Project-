@@ -692,6 +692,16 @@ footer {
   cursor: pointer;
 }
 
+.auth-error {
+  color: #d93025;
+  font-size: 12px;
+  min-height: 16px;
+}
+
+input.is-invalid {
+  border-color: #d93025;
+}
+
 @media (max-width: 1024px) {
   .navbar {
     padding-left: 40px;

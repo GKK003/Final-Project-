@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="reg.css" />
+  </head>
+  <body>
+    <div class="main_box">
+      <div class="card">
+        <h1>Create account</h1>
+        <p class="sub">Fill in the details below</p>
+
+        <form id="registerForm">
+          <div class="box">
+            <label>Full name</label>
+            <input type="text" id="fullName" />
+            <div class="error" id="nameError"></div>
+          </div>
+
+          <div class="box">
+            <label>Email</label>
+            <input type="email" id="email" />
+            <div class="error" id="emailError"></div>
+          </div>
+
+          <div class="box">
+            <label>Password</label>
+            <input type="password" id="password" />
+            <div class="error" id="passwordError"></div>
+          </div>
+
+          <div class="box">
+            <label>Confirm password</label>
+            <input type="password" id="confirmPassword" />
+            <div class="error" id="confirmError"></div>
+          </div>
+
+          <button type="submit">Register</button>
+
+          <div id="success" class="success"></div>
+        </form>
+      </div>
+    </div>
+
+    <script src="scriptreg.js"></script>
+  </body>
+</html>
