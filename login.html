@@ -6,5 +6,35 @@
     <link rel="stylesheet" href="login.css" />
     <title>Login Page</title>
   </head>
-  <body></body>
+  <body>
+    <div class="main_box">
+      <div class="welcome_box">
+        <h1>Log In</h1>
+
+        <form class="login_form" id="loginForm">
+          <div class="box">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" />
+            <div class="error" id="loginEmailError"></div>
+          </div>
+
+          <div class="box">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" />
+            <div class="error" id="loginPasswordError"></div>
+          </div>
+
+          <button type="submit">Log in</button>
+          <div id="loginStatus" class="status"></div>
+
+          <p class="need_acc">
+            Need an account?
+            <a class="need_acc_a" href="registration.html">Create Account</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
 </html>
