@@ -35,10 +35,68 @@
         </div>
 
         <div class="sign">
-          <a target="_blank" class="login" href="login.html">Login</a>
-          <a target="_blank" href="registration.html"
-            ><button class="signup">Sign up</button></a
-          >
+          <button id="openLoginPopup" class="login link-btn" type="button">
+            Login
+          </button>
+          <button id="openRegisterPopup" class="signup" type="button">
+            Sign up
+          </button>
+        </div>
+
+        <div id="loginPopup" class="popup" aria-hidden="true">
+          <div class="popup-box auth-popup-box">
+            <h3>Log In</h3>
+            <form id="popupLoginForm" class="auth-form">
+              <input type="email" id="popupLoginEmail" placeholder="Email" />
+              <div class="auth-error" id="popupLoginEmailError"></div>
+
+              <input
+                type="password"
+                id="popupLoginPassword"
+                placeholder="Password"
+              />
+              <div class="auth-error" id="popupLoginPasswordError"></div>
+
+              <div class="auth-status" id="popupLoginStatus"></div>
+              <div class="auth-actions">
+                <button type="submit">Log in</button>
+                <button type="button" id="closeLoginPopup">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="registerPopup" class="popup" aria-hidden="true">
+          <div class="popup-box auth-popup-box">
+            <h3>Create account</h3>
+            <form id="popupRegisterForm" class="auth-form">
+              <input type="text" id="popupFullName" placeholder="Full name" />
+              <div class="auth-error" id="popupNameError"></div>
+
+              <input type="email" id="popupEmail" placeholder="Email" />
+              <div class="auth-error" id="popupEmailError"></div>
+
+              <input
+                type="password"
+                id="popupPassword"
+                placeholder="Password"
+              />
+              <div class="auth-error" id="popupPasswordError"></div>
+
+              <input
+                type="password"
+                id="popupConfirmPassword"
+                placeholder="Confirm password"
+              />
+              <div class="auth-error" id="popupConfirmError"></div>
+
+              <div class="auth-status" id="popupRegisterStatus"></div>
+              <div class="auth-actions">
+                <button type="submit">Register</button>
+                <button type="button" id="closeRegisterPopup">Cancel</button>
+              </div>
+            </form>
+          </div>
         </div>
       </header>
       <video
